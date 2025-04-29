@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_500"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="Statistics" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/statistics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visitor Statistics"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_purple"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+    <!-- Statistics Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/statistics_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Total Visitors -->
+            <TextView
+                android:id="@+id/total_visitors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Visitors: 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:paddingBottom="8dp" />
+
+            <!-- Checked In Visitors -->
+            <TextView
+                android:id="@+id/checked_in_visitors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checked In Visitors: 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:paddingBottom="8dp" />
+
+            <!-- Checked Out Visitors -->
+            <TextView
+                android:id="@+id/checked_out_visitors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checked Out Visitors: 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:paddingBottom="8dp" />
+
+            <!-- Visitors Today -->
+            <TextView
+                android:id="@+id/visitors_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitors Today: 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:paddingBottom="8dp" />
+
+            <!-- Visitors Yesterday -->
+            <TextView
+                android:id="@+id/visitors_yesterday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitors Yesterday: 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:paddingBottom="8dp" />
+
+            <!-- Visitors Last 7 Days -->
+            <TextView
+                android:id="@+id/visitors_last_7_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitors Last 7 Days: 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:paddingBottom="8dp" />
+
+            <!-- Visitors Last 30 Days -->
+            <TextView
+                android:id="@+id/visitors_last_30_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitors Last 30 Days: 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_purple"
+                android:paddingBottom="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

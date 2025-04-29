@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Visitor Photo -->
+        <ImageView
+            android:id="@+id/visitor_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Visitor Details -->
+        <LinearLayout
+            android:id="@+id/visitor_details_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/visitor_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/visitor_id_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/visitor_id_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple" />
+
+            <TextView
+                android:id="@+id/visitor_id_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/visitor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/check_in_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_in_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/check_in_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/check_out_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_out_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/check_out_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/phone_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/purpose_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/purpose_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/purpose_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/destination_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destination_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/destination_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/id_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/id_number_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/id_number_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <!-- Verification Status -->
+            <TextView
+                android:id="@+id/verification_status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verification_status_label"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/verification_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending Verification"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500" />
+
+            <!-- Verify Check-In Button -->
+            <Button
+                android:id="@+id/verify_check_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verify_check_in"
+                android:textSize="14sp"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

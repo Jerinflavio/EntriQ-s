@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple">
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            app:elevation="0dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_500"
+                app:title="@string/check_in_visitor_title"
+                app:titleTextColor="@color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Form Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_form"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/app_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Header -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/check_in_visitor_title"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_purple"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Photo Capture -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:id="@+id/visitor_photo"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:contentDescription="@string/visitor_photo_desc"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_profile"
+                            android:background="@drawable/circle_background"
+                            android:clipToOutline="true"
+                            android:padding="0dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/capture_photo_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/capture_photo"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:contentDescription="@string/content_desc_capture_photo_button"
+                            app:backgroundTint="@color/purple_500"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="@color/dark_purple"
+                            app:strokeWidth="1dp" />
+                    </LinearLayout>
+
+                    <!-- Name Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/visitor_name_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.Entriqs.TextInputLayout.OutlinedBox"
+                        android:hint="@string/hint_visitor_name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/visitor_name_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="56dp"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/dark_purple"
+                            android:background="@null"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Phone Number Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phone_number_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.Entriqs.TextInputLayout.OutlinedBox"
+                        android:hint="@string/hint_phone_number">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phone_number_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="56dp"
+                            android:inputType="phone"
+                            android:textColor="@color/dark_purple"
+                            android:background="@null"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Purpose Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/purpose_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.Entriqs.TextInputLayout.OutlinedBox"
+                        android:hint="@string/hint_purpose">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/purpose_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="56dp"
+                            android:inputType="text"
+                            android:textColor="@color/dark_purple"
+                            android:background="@null"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Destination Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/destination_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.Entriqs.TextInputLayout.OutlinedBox"
+                        android:hint="@string/hint_destination">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/destination_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="56dp"
+                            android:inputType="text"
+                            android:textColor="@color/dark_purple"
+                            android:background="@null"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- ID Number Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/id_number_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        style="@style/Widget.Entriqs.TextInputLayout.OutlinedBox"
+                        android:hint="@string/hint_id_number">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_number_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="56dp"
+                            android:inputType="text"
+                            android:textColor="@color/dark_purple"
+                            android:background="@null"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Check In Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/check_in_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="@string/check_in"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:contentDescription="@string/content_desc_check_in_button"
+                        app:backgroundTint="@color/purple_500"
+                        app:cornerRadius="12dp"
+                        app:strokeColor="@color/dark_purple"
+                        app:strokeWidth="1dp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:headerLayout="@layout/nav_header_staff"
+        app:itemIconTint="@color/dark_purple"
+        app:itemTextColor="@color/dark_purple"
+        app:menu="@menu/staff_nav_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

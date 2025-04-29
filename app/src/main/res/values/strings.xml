@@ -1,0 +1,312 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">EntriQ\'s</string>
+
+    <!-- Navigation Drawer Items -->
+    <string name="navigation_dashboard">Dashboard</string>
+    <string name="navigation_block">Block</string>
+    <string name="navigation_new_visitor">New Visitor</string>
+    <string name="navigation_manage_visitor">Manage Visitor</string>
+    <string name="navigation_visitor_detail">Visitor Detail</string>
+    <string name="navigation_security">Security</string>
+
+    <!-- Navigation Drawer Descriptions -->
+    <string name="navigation_dashboard_desc">Navigate to Dashboard</string>
+    <string name="navigation_block_desc">Navigate to Block</string>
+    <string name="navigation_new_visitor_desc">Navigate to New Visitor</string>
+    <string name="navigation_manage_visitor_desc">Navigate to Manage Visitor</string>
+    <string name="navigation_visitor_detail_desc">Navigate to Visitor Detail</string>
+    <string name="navigation_security_desc">Navigate to Security</string>
+
+    <!-- Toolbar Titles -->
+    <string name="ai_report_title">AI Report</string>
+    <string name="admin_dashboard_title">Admin Dashboard</string>
+    <string name="role_management_title">Role Management</string>
+    <string name="security_management_title">Security Management</string>
+    <string name="staff_management_title">Staff Management</string>
+    <string name="visitor_history_title">Visitor History</string>
+    <string name="manage_visitor_title">Manage Visitor</string>
+
+    <!-- Section Headers -->
+    <string name="ai_report_header">AI Report Summary</string>
+    <string name="staff_list_header">Staff List</string>
+    <string name="security_list_header">Security List</string>
+    <string name="visitor_list_header">Visitor History</string>
+    <string name="role_list_header">Role List</string>
+    <string name="section_security">Security</string>
+
+    <!-- Hints and Placeholders -->
+    <string name="hint_name">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_role_name">Role Name</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_security_name">Security Name</string>
+    <string name="hint_staff_name">Staff Name</string>
+    <string name="hint_purpose">Purpose</string>
+    <string name="hint_destination">Destination</string>
+    <string name="admin_login_title">Admin Username</string>
+    <string name="staff_login_title">Staff Username</string>
+    <string name="security_login_title">Security Username</string>
+
+    <!-- Button Texts -->
+    <string name="login_button">Login</string>
+    <string name="role_admin">Admin</string>
+    <string name="role_staff">Staff</string>
+    <string name="role_security">Security</string>
+    <string name="filter_options">Filter</string>
+    <string name="filter_options_time">Filter by Time</string>
+    <string name="check_out">Check Out</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="add">Add</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Status and Counts -->
+    <string name="security_active_count">Active Security: %1$d/%2$d</string>
+    <string name="staff_active_count">Active Staff: %1$d/%2$d</string>
+    <string name="recent_additions">Recent Additions (Last 7 Days): %1$d</string>
+    <string name="security_status">Status: %1$s</string>
+    <string name="staff_status">Status: %1$s</string>
+    <string name="role_status">Status</string>
+    <string name="check_in_time">Check-In: %1$s</string>
+    <string name="check_out_time">Check-Out: %1$s</string>
+
+    <!-- Empty States -->
+    <string name="no_report_data">No report data available</string>
+    <string name="no_roles_available">No roles available</string>
+    <string name="no_security_available">No security personnel available</string>
+    <string name="no_staff_available">No staff available</string>
+    <string name="no_visitors_available">No visitors available</string>
+
+    <!-- Dialog Titles and Messages -->
+    <string name="select_filter_title">Select Filter</string>
+    <string name="add_role_title">Add %1$s Role</string>
+    <string name="delete_role_title">Delete Role</string>
+    <string name="delete_role_message">Are you sure you want to delete %1$s?</string>
+    <string name="role_selection_title">Select Your Role</string>
+    <string name="exit_confirmation_title">Exit Confirmation</string>
+    <string name="exit_confirmation_message">Are you sure you want to exit?</string>
+    <string name="check_out_confirmation_title">Confirm Check-Out</string>
+    <string name="check_out_confirmation_message">Are you sure you want to check out %1$s?</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_login_failed">Please select a role and enter credentials</string>
+    <string name="toast_login_success">Login successful as %1$s</string>
+    <string name="toast_filtered_by">Filtered by: %1$s</string>
+    <string name="toast_block_clicked">Block clicked</string>
+    <string name="toast_visitor_detail_clicked">Visitor Detail clicked</string>
+    <string name="toast_security_clicked">Security clicked</string>
+    <string name="toast_error_loading_data">Error loading data: %1$s</string>
+    <string name="role_added">Role added successfully</string>
+    <string name="role_deleted">Role deleted successfully</string>
+    <string name="role_activated">Role activated</string>
+    <string name="role_deactivated">Role deactivated</string>
+    <string name="visitor_added">Visitor %1$s added successfully</string>
+    <string name="visitor_checked_out">Visitor %1$s checked out successfully</string>
+    <string name="toast_visitor_updated">Visitor updated successfully</string>
+
+    <!-- Error Messages -->
+    <string name="error_name_phone_required">Name and phone are required</string>
+    <string name="error_invalid_mobile_number">Invalid mobile number (must be 10 digits)</string>
+
+    <!-- Content Descriptions -->
+    <string name="menu_open_desc">Open navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_logo_desc">App logo</string>
+    <string name="profile_icon_desc">Profile icon</string>
+    <string name="section_icon_desc">Section icon</string>
+    <string name="fab_add_visitor_desc">Add visitor</string>
+    <string name="fab_add_role_desc">Add role</string>
+    <string name="delete_role_desc">Delete role</string>
+    <string name="visitor_photo_desc">Photo of visitor %1$s</string>
+    <string name="content_desc_name">Name of the role</string>
+    <string name="content_desc_phone">Phone number of the role</string>
+    <string name="content_desc_email">Email of the role</string>
+    <string name="content_desc_password">Password of the role</string>
+
+    <!-- Welcome Message -->
+    <string name="welcome_message">Welcome, Admin!</string>
+
+    <!-- New Strings for DashboardActivity -->
+    <string name="dashboard_title">DASHBOARD</string>
+    <string name="filter_day">Last Day</string>
+    <string name="filter_week">Last Week</string>
+    <string name="filter_month">Last Month</string>
+    <string name="log_no_visitors">No visitors found in SharedPreferences</string>
+    <string name="log_deserializing_visitors">Deserializing visitors: %s</string>
+
+    <!-- New Navigation Strings -->
+    <string name="nav_security">Security</string>
+    <string name="nav_staff">Staff</string>
+    <string name="nav_ai_report">AI Report</string>
+    <string name="nav_visitor_history">Visitor History</string>
+    <string name="nav_role_management">Role Management</string>
+
+    <string name="active_staff_count">Active Staff: %1$d/%2$d</string>
+    <string name="active_security_count">Active Security: %1$d/%2$d</string>
+    <string name="role_updated_successfully">Role updated successfully</string>
+    <string name="failed_to_update_role">Failed to update role: Invalid data</string>
+    <string name="active_visitor_count">Active Visitor: %1$d/%2$d</string>
+    <string name="edit_role_cancelled">Edit role cancelled</string>
+
+    <!-- Updated Strings for Security List -->
+    <string name="admin_security_list_title">Admin Security List</string>
+    <string name="admin_security_list">Admin Security List</string>
+
+    <!-- New strings for Staff page -->
+    <string name="admin_staff_list_title">Admin Staff List</string>
+
+    <!-- New strings for ai report page -->
+    <string name="admin_ai_report_title">AI Report</string>
+    <string name="no_report_available">No report data available</string>
+    <string name="summary_title">Summary</string>
+    <string name="no_summary_available">No summary available</string>
+    <string name="role_status_distribution_title">Role Status Distribution</string>
+
+    <string name="error_destination_required">Destination is required</string>
+    <string name="error_phone_number_required">Phone number is required</string>
+    <string name="error_purpose_required">Purpose of visit is required</string>
+    <string name="error_visitor_name_required">Visitor name is required</string>
+    <string name="toast_camera_permission_denied">Camera permission denied</string>
+    <string name="toast_failed_to_create_image">Failed to create image file</string>
+    <string name="toast_invalid_visitor_data">Invalid visitor data</string>
+    <string name="toast_photo_capture_cancelled">Photo capture cancelled</string>
+    <string name="check_in_visitor_title">Check In Visitor</string>
+    <string name="content_desc_capture_photo_button">Capture visitor photo</string>
+    <string name="capture_photo">Capture Photo</string>
+    <string name="hint_visitor_name">Visitor Name</string>
+    <string name="hint_id_number">ID Number (Optional)</string>
+    <string name="content_desc_check_in_button">Check in visitor</string>
+    <string name="check_in">Check In</string>
+
+    <string name="check_out_visitor_title">Check Out Visitor</string>
+    <string name="no_visitors">No visitors found.</string>
+    <string name="checked_in_label">Checked In: %s</string>
+    <string name="checked_out_label">Checked Out: %s</string>
+    <string name="status_label">Status: %s</string>
+
+    <string name="check_in_label">Check-In: %s</string>
+    <string name="check_out_label">Check-Out: %s</string>
+    <string name="na">N/A</string>
+    <string name="all_visitor_details">All Visitor Details</string>
+    <string name="visitor_list">Visitor List</string>
+    <string-array name="filter_options">
+        <item>All</item>
+        <item>Checked In</item>
+        <item>Checked Out</item>
+    </string-array>
+
+    <!-- Date filter options -->
+    <string-array name="date_filter_options">
+        <item>All Time</item>
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>Last 7 Days</item>
+        <item>Last 30 Days</item>
+    </string-array>
+
+    <!-- StatisticsActivity strings -->
+    <string name="total_visitors">Total Visitors: %d</string>
+    <string name="checked_in_visitors">Checked In Visitors: %d</string>
+    <string name="checked_out_visitors">Checked Out Visitors: %d</string>
+    <string name="average_check_in_duration">Average Check-In Duration: %d minutes</string>
+    <string name="average_check_in_duration_na">Average Check-In Duration: N/A</string>
+    <string name="most_frequent_visitor">Most Frequent Visitor: %1$s (%2$d visits)</string>
+    <string name="most_frequent_visitor_na">Most Frequent Visitor: N/A</string>
+    <string name="peak_check_in_hour">Peak Check-In Hour: %1$s:00 %2$s (%3$d check-ins)</string>
+    <string name="peak_check_in_hour_na">Peak Check-In Hour: N/A</string>
+    <string name="visitors_today">Visitors Today: %d</string>
+    <string name="visitors_yesterday">Visitors Yesterday: %d</string>
+    <string name="visitors_last_7_days">Visitors Last 7 Days: %d</string>
+    <string name="visitors_last_30_days">Visitors Last 30 Days: %d</string>
+
+
+    <string name="security_dashboard">Security Dashboard</string>
+    <string name="security_role">Security Role</string>
+    <string name="total_current_visitors">Total Current Visitors: %d</string>
+    <string name="pending_verifications">Pending Check-In Verifications: %d</string>
+    <string name="recent_incidents">Recent Incidents</string>
+    <string name="view_current_visitors">View Current Visitors</string>
+    <string name="verify_check_ins">Verify Check-Ins</string>
+    <string name="report_incident">Report Incident</string>
+    <string name="initiate_emergency_alert">Initiate Emergency Alert</string>
+    <string name="current_visitors">Current Visitors</string>
+    <string name="check_in_verification">Check-In Verification</string>
+    <string name="incident_reporting">Incident Reporting</string>
+    <string name="visitor_search">Visitor Search</string>
+    <string name="emergency_dashboard">Emergency Dashboard</string>
+    <string name="logout">Logout</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+
+    <!-- New strings for updated layout -->
+    <string name="total_current_visitors_label">Current Visitors</string>
+    <string name="pending_verifications_label">Pending Verifications</string>
+    <string name="total_incidents_label">Total Incidents Reported</string>
+
+    <string name="visitor_id_label">Visitor ID:</string>
+    <string name="phone_label">Phone:</string>
+    <string name="purpose_label">Purpose:</string>
+    <string name="destination_label">Destination:</string>
+    <string name="id_number_label">ID Number:</string>
+
+    <string name="verification_status_label">Verification Status:</string>
+    <string name="verify_check_in">Verify Check-In</string>
+    <string name="pending_verification">Pending Verification</string>
+    <string name="verified">Verified</string>
+
+    <string name="incident_reporting_title">Incident Reporting</string>
+    <string name="date_time_label">Date and Time:</string>
+    <string name="date_time_hint">e.g., 01/04/2025 23:18</string>
+    <string name="location_label">Location:</string>
+    <string name="location_hint">e.g., Main Lobby, Building A</string>
+    <string name="incident_type_label">Incident Type:</string>
+    <string name="description_label">Description:</string>
+    <string name="description_hint">Describe what happened...</string>
+    <string name="parties_involved_label">Parties Involved:</string>
+    <string name="parties_involved_hint">List names and roles of individuals involved...</string>
+    <string name="actions_taken_label">Actions Taken:</string>
+    <string name="actions_taken_hint">Describe actions taken to address the incident...</string>
+    <string name="reported_by_label">Reported By:</string>
+    <string name="reported_by_hint">e.g., John Doe, Security Officer</string>
+    <string name="submit_incident">Submit Incident</string>
+    <string name="incident_submitted">Incident reported successfully!</string>
+    <string name="incident_submission_failed">Please fill in all required fields.</string>
+
+    <string name="visitor_search_title">Visitor Search</string>
+    <string name="search_visitors_hint">Search by name, ID, or phone...</string>
+
+    <string name="emergency_dashboard_title">Emergency Dashboard</string>
+    <string name="emergency_actions">Emergency Actions</string>
+    <string name="initiate_evacuation">Initiate Evacuation</string>
+    <string name="send_alert">Send Alert</string>
+    <string name="situational_awareness">Situational Awareness</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="evacuation_initiated">Evacuation initiated! Alert sent to all personnel.</string>
+    <string name="alert_sent">Alert sent successfully!</string>
+    <string name="alert_message_hint">Enter alert message...</string>
+
+    <string name="incident_list_title">Incident List</string>
+    <string name="more_details">More Details</string>
+    <string name="incident_details_title">Incident Details</string>
+
+    <string name="incident_reports">Incident Reports</string>
+
+    <string name="filter_all_time">All Time</string>
+    <string name="filter_today">Today</string>
+
+
+    <string name="face_recognition_title">Face Recognition</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="error_loading_model">Error loading model</string>
+    <string name="error_processing_image">Error processing image</string>
+    <string name="no_match">No matching visitor found</string>
+    <string name="visitor_details">Visitor Details</string>
+    <string name="visitor_details_format">%1$s\n\nName: %2$s\nVisitor ID: %3$s\nCheck-In Time: %4$s\nStatus: %5$s</string>
+    <!-- Added string for permission denial -->
+    <string name="camera_permission_denied">Camera permission denied</string>
+    <string name="no_face_detected">No face detected in image</string>
+</resources>

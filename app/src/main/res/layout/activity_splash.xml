@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    tools:context=".SplashActivity">
+
+  <!-- Background Gradient Overlay -->
+  <View
+      android:id="@+id/backgroundOverlay"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/gradient_background"
+      android:alpha="0.8"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- Logo -->
+  <ImageView
+      android:id="@+id/logo"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:src="@drawable/ic_logo"
+      android:contentDescription="App Logo"
+      android:scaleType="centerInside"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="100dp" />
+
+  <!-- App Name (Centered) -->
+
+  <!-- Horizontal Progress Bar (At Bottom) -->
+  <TextView
+      android:id="@+id/appName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:layout_marginBottom="20dp"
+      android:shadowColor="#40000000"
+      android:shadowDx="2"
+      android:shadowDy="2"
+      android:shadowRadius="4"
+      android:text="EntriQ's"
+      android:textColor="#FFFFFF"
+      android:textSize="36sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@id/loadingBar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/logo"
+      app:layout_constraintVertical_bias="0.282" />
+
+  <ProgressBar
+      android:id="@+id/loadingBar"
+      android:layout_width="200dp"
+      android:layout_height="20dp"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:indeterminate="true"
+      android:progressDrawable="@drawable/horizontal_progress_bar"
+      android:indeterminateTint="#FFFFFF"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginBottom="40dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

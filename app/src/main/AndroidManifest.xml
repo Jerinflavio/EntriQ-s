@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.entriqs">
+    <!-- Declare the CAMERA permission -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Declare storage permission for Android 9 and below -->
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" /> <!-- Declare that the app uses the camera feature (optional for functionality) -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Entriqs">
+        <activity
+            android:name=".FaceRecognitionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IncidentListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VisitorSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IncidentReportingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CurrentVisitorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SecurityDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatisticsActivity"
+            android:exported="false" /> <!-- Replaced activity_staff_visitor_details with VisitorDetailsActivity -->
+        <activity
+            android:name=".VisitorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckOutActivity"
+            android:exported="false" /> <!-- FileProvider for sharing photo files with the camera app -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.entriqs.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".CheckInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StaffDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminAIReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminStaffListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminSecurityListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminRoleManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddRoleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditRoleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden" /> <!-- Prevent keyboard from showing on start -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"> <!-- Already has NoActionBar theme -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Added missing activities -->
+        <activity
+            android:name=".VisitorListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditVisitorActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

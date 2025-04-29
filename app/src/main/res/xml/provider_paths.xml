@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <paths>
+        <!-- Allow sharing of files in the app's external files directory under the "Pictures" subdirectory -->
+        <external-files-path name="camera_photos" path="Pictures/" />
+        <cache-path name="temp_photos" path="." />
+    </paths>
+</PreferenceScreen>

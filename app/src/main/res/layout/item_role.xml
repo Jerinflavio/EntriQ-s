@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Name TextView -->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name of the security"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_purple"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/switch_status"
+            app:layout_constraintHorizontal_weight="1"
+            android:contentDescription="Name: @string/content_desc_name" />
+
+        <!-- Phone TextView -->
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1234567890"
+            android:textSize="14sp"
+            android:textColor="@color/gray_700"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/switch_status"
+            android:contentDescription="Phone: @string/content_desc_phone" />
+
+        <!-- Email TextView -->
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="email@example.com"
+            android:textSize="14sp"
+            android:textColor="@color/gray_700"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/switch_status"
+            android:contentDescription="Email: @string/content_desc_email" />
+
+        <!-- Password TextView -->
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="password"
+            android:textSize="14sp"
+            android:textColor="@color/gray_700"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/switch_status"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="Password: @string/content_desc_password" />
+
+        <!-- Toggle Switch -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active"
+            android:textSize="14sp"
+            android:textColor="@color/dark_purple"
+            app:thumbTint="@color/light_purple_300"
+            app:trackTint="@color/gray_500"
+            app:layout_constraintTop_toTopOf="@id/tv_name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_password"
+            app:layout_constraintEnd_toStartOf="@id/btn_edit"
+            android:contentDescription="Toggle status between Active and Inactive" />
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_edit"
+            android:background="@android:color/transparent"
+            android:contentDescription="Edit this entry"
+            app:layout_constraintTop_toTopOf="@id/switch_status"
+            app:layout_constraintBottom_toBottomOf="@id/switch_status"
+            app:layout_constraintEnd_toStartOf="@id/btn_delete"
+            android:layout_marginStart="8dp" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_delete"
+            android:background="@android:color/transparent"
+            android:contentDescription="Delete this entry"
+            app:layout_constraintTop_toTopOf="@id/switch_status"
+            app:layout_constraintBottom_toBottomOf="@id/switch_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

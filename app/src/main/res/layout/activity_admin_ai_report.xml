@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_purple">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_500"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="@string/admin_ai_report_title"
+                app:titleTextColor="@color/white"
+                app:navigationIconTint="@color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_purple"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/report_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/admin_ai_report_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_purple"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/empty_state_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_report_available"
+                android:textSize="18sp"
+                android:textColor="@color/gray_700"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/report_title" />
+
+            <ScrollView
+                android:id="@+id/report_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/report_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Summary Section -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <!-- Summary Title -->
+                            <TextView
+                                android:id="@+id/summary_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/summary_title"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/dark_purple"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!-- Total Roles -->
+                            <TextView
+                                android:id="@+id/total_roles_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Roles:"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/dark_purple"
+                                android:layout_marginTop="16dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/summary_title" />
+
+                            <TextView
+                                android:id="@+id/total_roles_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="16sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/total_roles_label"
+                                app:layout_constraintTop_toTopOf="@id/total_roles_label"
+                                app:layout_constraintBottom_toBottomOf="@id/total_roles_label" />
+
+                            <!-- Security Personnel -->
+                            <ImageView
+                                android:id="@+id/security_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_security"
+                                android:tint="@color/purple_500"
+                                android:contentDescription="Security Icon"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/total_roles_label" />
+
+                            <TextView
+                                android:id="@+id/security_personnel_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Security Personnel:"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/dark_purple"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/security_icon"
+                                app:layout_constraintTop_toTopOf="@id/security_icon"
+                                app:layout_constraintBottom_toBottomOf="@id/security_icon" />
+
+                            <TextView
+                                android:id="@+id/security_personnel_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="16sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/security_personnel_label"
+                                app:layout_constraintTop_toTopOf="@id/security_personnel_label"
+                                app:layout_constraintBottom_toBottomOf="@id/security_personnel_label" />
+
+                            <TextView
+                                android:id="@+id/security_active_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Active:"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginStart="32dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/security_icon" />
+
+                            <TextView
+                                android:id="@+id/security_active_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/security_active_label"
+                                app:layout_constraintTop_toTopOf="@id/security_active_label"
+                                app:layout_constraintBottom_toBottomOf="@id/security_active_label" />
+
+                            <TextView
+                                android:id="@+id/security_inactive_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Inactive:"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginTop="4dp"
+                                app:layout_constraintStart_toStartOf="@id/security_active_label"
+                                app:layout_constraintTop_toBottomOf="@id/security_active_label" />
+
+                            <TextView
+                                android:id="@+id/security_inactive_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/security_inactive_label"
+                                app:layout_constraintTop_toTopOf="@id/security_inactive_label"
+                                app:layout_constraintBottom_toBottomOf="@id/security_inactive_label" />
+
+                            <!-- Staff Members -->
+                            <ImageView
+                                android:id="@+id/staff_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_staff"
+                                android:tint="@color/purple_500"
+                                android:contentDescription="Staff Icon"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/security_inactive_label" />
+
+                            <TextView
+                                android:id="@+id/staff_members_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Staff Members:"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/dark_purple"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/staff_icon"
+                                app:layout_constraintTop_toTopOf="@id/staff_icon"
+                                app:layout_constraintBottom_toBottomOf="@id/staff_icon" />
+
+                            <TextView
+                                android:id="@+id/staff_members_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="16sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/staff_members_label"
+                                app:layout_constraintTop_toTopOf="@id/staff_members_label"
+                                app:layout_constraintBottom_toBottomOf="@id/staff_members_label" />
+
+                            <TextView
+                                android:id="@+id/staff_active_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Active:"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginStart="32dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/staff_icon" />
+
+                            <TextView
+                                android:id="@+id/staff_active_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/staff_active_label"
+                                app:layout_constraintTop_toTopOf="@id/staff_active_label"
+                                app:layout_constraintBottom_toBottomOf="@id/staff_active_label" />
+
+                            <TextView
+                                android:id="@+id/staff_inactive_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Inactive:"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginTop="4dp"
+                                app:layout_constraintStart_toStartOf="@id/staff_active_label"
+                                app:layout_constraintTop_toBottomOf="@id/staff_active_label" />
+
+                            <TextView
+                                android:id="@+id/staff_inactive_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/staff_inactive_label"
+                                app:layout_constraintTop_toTopOf="@id/staff_inactive_label"
+                                app:layout_constraintBottom_toBottomOf="@id/staff_inactive_label" />
+
+                            <!-- Insight -->
+                            <ImageView
+                                android:id="@+id/insight_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@android:drawable/ic_menu_info_details"
+                                android:tint="@color/purple_500"
+                                android:contentDescription="Insight Icon"
+                                android:layout_marginTop="16dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/staff_inactive_label" />
+
+                            <TextView
+                                android:id="@+id/insight_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Insight:"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/dark_purple"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/insight_icon"
+                                app:layout_constraintTop_toTopOf="@id/insight_icon"
+                                app:layout_constraintBottom_toBottomOf="@id/insight_icon" />
+
+                            <TextView
+                                android:id="@+id/insight_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="No insights available."
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_700"
+                                android:layout_marginTop="4dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/insight_label" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Visualization Section -->
+                    <TextView
+                        android:id="@+id/chart_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/role_status_distribution_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_purple"
+                        android:layout_marginBottom="8dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/status_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Floating Action Button for Refresh -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/refresh_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@android:drawable/ic_menu_rotate"
+            android:tint="@color/white"
+            app:backgroundTint="@color/purple_500"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/admin_nav_menu"
+        app:itemTextColor="@color/gray_700"
+        app:itemIconTint="@color/gray_700" />
+</androidx.drawerlayout.widget.DrawerLayout>

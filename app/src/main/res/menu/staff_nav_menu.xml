@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_check_in"
+        android:title="Check In" />
+    <item
+        android:id="@+id/nav_check_out"
+        android:title="Check Out" />
+    <item
+        android:id="@+id/nav_visitor_details"
+        android:title="Visitor Details" />
+    <item
+        android:id="@+id/nav_statistics"
+        android:title="Statistics" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+</menu>
